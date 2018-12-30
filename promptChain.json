@@ -1,0 +1,70 @@
+{
+    "chain": {
+        "prompt": "Hello and welcome to Dillon's CLI Study Tool, what would you like to do? (add/remove/study/modify)\n",
+        "responses": [
+            {
+                "response": "modify",
+                "prompt": "Which module would you like to modify? (module_name)\n",
+                "key": "modify_module",
+                "responses": [
+                    {
+                        "response": "module_name",
+                        "prompt": "What term would you like to modify? (term_name)\n",
+                        "key": "modify_term"
+                    }
+                ]
+            },
+            {
+                "response": "study",
+                "prompt": "What module would you like to study? (module_name)\n",
+                "key": "study"
+            },
+            {
+                "response": "add",
+                "prompt": "What would you like to add? (module/term)\n",
+                "responses": [
+                    {
+                        "response": "module",
+                        "prompt": "What would you like your module to be titled? (module_name)\n",
+                        "key": "add_module"
+                    },
+                    {
+                        "response": "term",
+                        "prompt": "What module would you like to add to? (module_name)\n",
+                        "key": "add_to_module",
+                        "responses": [
+                            {
+                                "response": "module_name",
+                                "prompt": "What term would you like to add? (term_name)\n",
+                                "key": "add_term"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "response": "remove",
+                "prompt": "Would you like to remove a module? (module/term)\n",
+                "responses": [
+                    {
+                        "response": "module",
+                        "prompt": "What module would you like to remove? (module_name)\n",
+                        "key": "remove_module"
+                    },
+                    {
+                        "response": "term",
+                        "prompt": "What module would you like to remove from? (module_name)\n",
+                        "key": "remove_from_module",
+                        "responses": [
+                            {
+                                "response": "module_name",
+                                "prompt": "What term would you like to remove? (term_name)\n",
+                                "key": "remove_term"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
